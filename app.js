@@ -47,30 +47,18 @@ function actualizarLista() {
         return;
     }
     
-    // Creamos una copia del array de amigos para evitar modificar el original
-    let amigosRestantes = [...amigos];
-    let resultado = document.getElementById("resultado");
-    resultado.innerHTML = ""; // Limpiar resultados anteriores
-    
-    // Recorremos el array de amigos y asignamos un amigo secreto a cada uno
-    amigos.forEach((amigo) => {
-        // Elegimos un amigo al azar de los restantes
-        let indiceAleatorio = Math.floor(Math.random() * amigosRestantes.length);
-        let amigoSecreto = amigosRestantes[indiceAleatorio];
-    
-        // Mostramos el resultado en la lista
-        let li = document.createElement("li");
-        li.textContent = `${amigo} -> ${amigoSecreto}`;
-        resultado.appendChild(li);
-    
-        // Eliminamos el amigo elegido para que no pueda ser elegido de nuevo
-        amigosRestantes.splice(indiceAleatorio, 1);
-    }); 
-    // Desactivar el botón para que no se pueda sortear de nuevo
-    //document.getElementById("btnSortear").disabled = true;
+      let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+      let amigoElegido = amigos[indiceAleatorio];
+
+      // Mostrar el resultado
+      let resultado = document.getElementById("resultado");
+      resultado.innerHTML = ""; // Limpiar resultados anteriores
+
+      let li = document.createElement("li");
+      li.textContent = `El amigo elegido es: ${amigoElegido}`;
+      resultado.appendChild(li);
+
  }
-
-
 
 
 // limpiamos la lista de amigos.
