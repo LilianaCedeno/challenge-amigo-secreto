@@ -4,7 +4,9 @@ Es una aplicación web interactiva para realizar sorteos de "Amigo Secreto" entr
 
 ## Quieres jugar?
 
-    Ingresa aquí: https://lilianacedeno.github.io/desafio-amigo-secreto/
+Ingresa aquí:
+
+   https://lilianacedeno.github.io/desafio-amigo-secreto/
 
 ## 🚀 Funcionalidades
 
